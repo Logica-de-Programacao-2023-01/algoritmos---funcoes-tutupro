@@ -1,13 +1,31 @@
 package main
 
-// Crie uma função que receba dois parâmetros (a e b) e retorne a divisão
-// entre eles. Caso o segundo parâmetro seja zero
-// retorne um erro.
+import "fmt"
+
+// Crie uma função que receba um slice de inteiros
+//e retorne a média aritmética dos valores.
 
 func main() {
 
+	var z int
+
+	x := []int{}
+
+	fmt.Print("Digite números para serem inseridos no slice: ")
+	fmt.Scan(&z)
+
+	x = append(x, z)
+	resultado := media(x)
+	fmt.Println(resultado)
+
 }
-func teste(a int64, b int64) int64 {
-	// codigo
-	return a / b
+func media(x []int) int {
+
+	resultado := 0
+
+	for _, x := range x {
+		resultado += x
+	}
+	return len(x) / resultado
+
 }
