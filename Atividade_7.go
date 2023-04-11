@@ -28,3 +28,38 @@ func mediaAritmetica(slice []int) float64 {
 
 Atividade 2º:
 
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var x string
+
+	str := []string{}
+
+	fmt.Print("Digite uma palavra aleatória: ")
+	fmt.Scan(&x)
+
+	u := append(str, x)
+
+	resultado := countVowels(str, str)
+
+	fmt.Println(resultado, u)
+
+}
+
+func countVowels(str string) int {
+	count := 0
+	for _, char := range str {
+		switch char {
+		case 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U':
+			count++
+		}
+	}
+	return count
+}
+
+Atividade 3º :
+
